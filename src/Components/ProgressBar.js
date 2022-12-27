@@ -9,9 +9,9 @@ const barStyle = {
   background: "rgba(52, 172, 239, 1)",
   width: "100%",
   height: "13px",
-  borderRadius: "2px",
+  borderRadius: "10%",
   display: "flex",
-  alignItems: "flex-end", // align the inner bar to the end of the the outer box
+  alignItems: "flex-end", 
 };
 
 const innerBar = {
@@ -19,7 +19,7 @@ const innerBar = {
   opacity: "100 !important",
   height: `100%`,
   width: `${percentage}%`,
-  borderRadius: "2px",
+  borderRadius: "10%",
 };
 
 

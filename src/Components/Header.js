@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import profile from "../assets/profile.jpg";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 
 function Menu(props) {
@@ -56,7 +55,7 @@ function Menu(props) {
           </StyledLi>
           <StyledLi active={location.pathname === "/"}>
             {" "}
-            <Link to="/"> Job Recommendations </Link>{" "}
+            <Link to="/Jobs"> Job Recommendations </Link>{" "}
           </StyledLi>
           <StyledLi active={location.pathname === "/DropIn"}>
             {" "}

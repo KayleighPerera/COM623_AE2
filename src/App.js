@@ -11,23 +11,67 @@ import Join from "./Views/Join";
 import DropIn from "./Views/DropIn";
 import Cv from "./Views/Cv_workshop";
 import Job from "./Views/Jobs";
-
+import Jobpage from "./Views/Jobpage";
+import SuccessCv from "./Views/SuccessCv";
+import SuccessJob from "./Views/SuccessJob";
 
 const checkins = [
-  {date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 28 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  { date: "Wed Jan 27 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  { date: "Wed Jan 26 2020 07:17:11 GMT+0000 (Greenwich Mean Time)" },
-  {date: "Wed Jan 25 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 23 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 22 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 21 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 20 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  { date: "Wed Jan 19 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 18 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 17 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 16 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
-  {date: "Wed Jan 15 2020 07:17:11 GMT+0000 (Greenwich Mean Time)"},
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 20,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 100,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 50,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 30,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 70,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 90,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 25,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 5,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 10,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 25,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 15,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 85,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 60,
+  },
+  {
+    date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
+    cv: 35,
+  },
 ];
 
 function App() {
@@ -78,6 +122,15 @@ function App() {
             </Route>
             <Route path="/Jobs">
               <Job />
+            </Route>
+            <Route path="/Jobpage">
+              <Jobpage />
+            </Route>
+            <Route path="/SuccessCv">
+              <SuccessCv />
+            </Route>
+            <Route path="/SuccessJob">
+              <SuccessJob />
             </Route>
           </Switch>
         </div>

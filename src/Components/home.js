@@ -30,6 +30,7 @@ function Home(props) {
   const Text1 = styled.p`
     margin-left: 20px;
     justify-content: center;
+    text-align: center;
     display: flex;
     align-items: center;
     margin-top: 60px;

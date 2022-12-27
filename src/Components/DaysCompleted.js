@@ -10,7 +10,7 @@ function DaysCompleted(props) {
 
   const DaysCompleteHeading = styled.h2`
     text-align: center;
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors.blue};
   `;
 
   const textStyle = { textAlign: "center", color: "#BC9CFF" };
@@ -27,7 +27,7 @@ function DaysCompleted(props) {
       <div style={divStyle} id="wrapper">
         <DaysCompleteHeading>Days Completed!</DaysCompleteHeading>
 
-        <Histogram barCount={7} bars={checkins.map((c) => c.score * 5)} />
+        <Histogram barCount={2} bars={checkins.map((c) => c.score * 5)} />
         <ProgressBar percentage={50} />
         <h4 style={{ color: "#1F2041" }}>
           {" "}
