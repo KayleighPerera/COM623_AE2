@@ -1,17 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import DaysCompleted from "../Components/DaysCompleted";
-import CheckinComment from "../Components/CheckinComment";
+import Home from "../Components/home";
+import Cv from "./Cv_workshop";
 
 function Dash(props) {
   const { checkins } = props;
 
   return (
     <div>
-      <DaysCompleted days={15} checkins={checkins}>
-        {" "}
-      </DaysCompleted>
-      <CheckinComment />
+      <Home />
     </div>
   );
 }

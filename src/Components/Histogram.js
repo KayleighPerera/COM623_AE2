@@ -8,12 +8,12 @@ function Bar(props) {
   const StyledBar = styled.div`
     background: linear-gradient(
       180deg,
-      rgba(56, 149, 95, 0.25),
+      rgba(52,175,239),
       rgba(102, 210, 234, 0.25)
     );
     width: 30px;
     height: 70.74px;
-    border-radius: 2px;
+    border-radius: 20px;
     display: flex;
     align-items: flex-end;
   `;

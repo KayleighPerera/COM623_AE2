@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import avatarLarge from "../assets/avatar_small.png";
+import profile from "../assets/profile.jpg";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 
@@ -43,22 +43,22 @@ function Menu(props) {
       <StyledNav>
         <ul>
           <StyledLi active={location.pathname === "/"}>
-            {" "}
+            {""}
             <Link to="/"> Home </Link>{" "}
           </StyledLi>
-          <StyledLi active={location.pathname === "/"}>
+          <StyledLi active={location.pathname === "/StudentInfo"}>
             {" "}
-            <Link to="/"> Student Information </Link>{" "}
+            <Link to="/StudentInfo"> Student Information </Link>{" "}
           </StyledLi>
           <StyledLi active={location.pathname === "/"}>
             {" "}
-            <Link to="/"> CV Workshop </Link>{" "}
+            <Link to="/Cv_workshop"> CV Workshop </Link>{" "}
           </StyledLi>
           <StyledLi active={location.pathname === "/"}>
             {" "}
             <Link to="/"> Job Recommendations </Link>{" "}
           </StyledLi>
-          <StyledLi active={location.pathname === "/profile"}>
+          <StyledLi active={location.pathname === "/DropIn"}>
             {" "}
             <Link to="/DropIn"> Drop-in-sessions </Link>{" "}
           </StyledLi>
@@ -98,6 +98,7 @@ function Header(props) {
     display: flex;
     img {
       margin-top: 8%;
+      border-radius: 50%;
     }
   `;
 
@@ -139,7 +140,7 @@ function Header(props) {
         </StyledMenu>
         <h1> Student Focus</h1>
         <StyledUserAvatar>
-          <img src={avatarLarge} alt="avatar" />
+          <img src={profile} alt="profile" />
         </StyledUserAvatar>
       </StyledWrapper>
     </div>

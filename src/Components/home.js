@@ -1,16 +1,11 @@
 import React from "react";
 import Tile from "./Tile";
 import styled from "styled-components";
-import avatarSmall from "../assets/avatar_small.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import Histogram from "./Histogram";
 import work from "../assets/work.png";
-import Button from "../Components/Button";
+import Button from "./Button";
 import { Link, useLocation } from "react-router-dom";
 
-
-function CheckinComment(props) {
+function Home(props) {
   const location = useLocation();
   const StyledImage = styled.div`
     img {
@@ -32,14 +27,19 @@ function CheckinComment(props) {
     margin-top: 20px;
   `;
 
-  const text = styled.p`
+  const Text1 = styled.p`
     margin-left: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    font-size: 30px;
   `;
   return (
     <Tile>
-      <text>
-        This application will help you write a cv and find a suitable job
-      </text>
+      <Text1>
+        This application will help you <br></br>write a cv and find a suitable job
+      </Text1>
       <Button text="get started" type="submit" />
       <StyledLi active={location.pathname === "/"}>
         <Link to="/Login"> Or Log In </Link>{" "}
@@ -51,6 +51,6 @@ function CheckinComment(props) {
   );
 }
 
-CheckinComment.propTypes = {};
+Home.propTypes = {};
 
-export default CheckinComment;
+export default Home;
