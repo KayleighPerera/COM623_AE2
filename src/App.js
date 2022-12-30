@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import Header from "./Components/Header";
 import GlobalStyles from "./config/globalStyles";
@@ -14,6 +14,9 @@ import Job from "./Views/Jobs";
 import Jobpage from "./Views/Jobpage";
 import SuccessCv from "./Views/SuccessCv";
 import SuccessJob from "./Views/SuccessJob";
+import useAuth from "./services/firebase/useAuth";
+import { initializeApp } from "firebase/app";
+import firebase from "../src/config/firebase";
 
 const checkins = [
   {
@@ -75,7 +78,10 @@ const checkins = [
 ];
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);  
+  const app = initializeApp(firebase);
+  const { isAuthenticated } = useAuth();
+
   const location = useLocation();
 
   const handleClick = (e) => {

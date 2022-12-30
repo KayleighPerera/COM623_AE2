@@ -6,6 +6,7 @@ function Button(props) {
   const { onClick, text } = props;
 
   const StyledButton = styled.button`
+    font-size: 40px;
     height: 44.63px;
     background: linear-gradient(180deg, #34acef 75%, #e9e9ec 100%);
     border-radius: 22px;

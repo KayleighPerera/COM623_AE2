@@ -23,7 +23,7 @@ function Home(props) {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 20px;
   `;
 
@@ -41,7 +41,7 @@ function Home(props) {
       <Text1>
         This application will help you <br></br>write a cv and find a suitable job
       </Text1>
-      <Button text="get started" type="submit" />
+      <Button text="Get Started" type="submit" />
       <StyledLi active={location.pathname === "/"}>
         <Link to="/Login"> Or Log In </Link>{" "}
       </StyledLi>

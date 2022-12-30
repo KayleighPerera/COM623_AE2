@@ -42,7 +42,7 @@ function Cv(props) {
 
   const TextArea = styled.div`
     margin-left: 10%;
-    margin-bottom: 2%
+    margin-bottom: 2%;
   `;
 
   const StyledLink = styled(Link)`
@@ -61,14 +61,14 @@ function Cv(props) {
     <div>
       <StyledHeader>CV Workshop</StyledHeader>
       <StyledDiv>
-        <strong>50%</strong> COMPLETE!
+        <strong>70%</strong> COMPLETE!
         <Histogram barCount={4} bars={checkins.map((c) => c.checkins * 5)} />
         <ProgressBar percentage={70} />
         <h4 style={{ color: "#1F2041" }}> </h4>
       </StyledDiv>
       <StyledCv>Last checked in 11th October 2022</StyledCv>
       <TextArea>
-        <textarea rows="20" cols="195" name="description">
+        <textarea rows="20" cols="170" name="description">
           CV Display Lorem ipsum dolor sit amet, Donec luctus tempus massa, in
           iaculis lorem. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Sed feugiat tortor non magna volutpat

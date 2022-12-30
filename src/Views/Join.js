@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Tile from "../Components/Tile";
 import { Link } from "react-router-dom";
 import Form from "../Components/LoginForm";
+import useAuth from "../services/firebase/useAuth";
 
 function Join() {
+  const { createEmailUser, signInFacebookUser, signInGoogleUser } = useAuth();
+  const [severErrorMessage, setServerErrorMessage] = useState("");
+  const handleEmailSubmit = async (data) => {
+    try {
+      const { email, password } = data;
+      await createEmailUser(email, password);
+    } catch (e) {
+      setServerErrorMessage(e.message);
+    }
+  };
+
+   const handleSocialSubmit = async (method) => {
+     try {
+       if (method === "facebook") {
+         await signInFacebookUser();
+       }
+       if (method === "google") {
+         await signInGoogleUser();
+       }
+     } catch (error) {
+       console.log("error");
+     }
+   };
   const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -27,7 +51,7 @@ function Join() {
   const StyledHeading = styled.h2`
     text-align: center;
     margin-top: 2%;
-    color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.blue};
   `;
   const StyledLink = styled(Link)`
     text-align: center;
@@ -39,8 +63,9 @@ function Join() {
         <StyledHeading>Get Started</StyledHeading>
         <StyledHeading>Join With </StyledHeading>
         <Form
-          onEmailSubmit={(d) => console.log(d)}
-          onSocialSubmit={(m) => console.log("social submit" + m)}
+          onSocialSubmit={handleSocialSubmit}
+          onEmailSubmit={handleEmailSubmit}
+          serverErrorMessage={severErrorMessage}
         />
         <StyledLink to="/login"> Already a member - Login </StyledLink>
       </StyledTile>
