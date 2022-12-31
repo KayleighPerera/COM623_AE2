@@ -51,33 +51,31 @@ Throughout this the report will demonstarte the methodology that was used to imp
 
 ## Methodology
 In the first assesment i explained what metholody was used to design and develop my web application the method used was the design thinking methodology which helped me make my app acessible and attainable in this assesment I have researched a development methodology that will be used throughtout the implementation of my application. The chosen methodology that was chosen is the agile development methodology.The agile methodlogy is broken up into six steps these steps include:
-1. Product Vision Statement
-2. Product Roadmap
-3.Product Backlog
-4. Release Plan
-5. Sprint Backlog
-6. Increment
+
+1. Product Vision Statement:<br>
+The product vision statement describes the overaching long-term mission for the application, the goal of my web application is to encourage students to use my app to be able to guide students in creating or adapting their Cv's or looking for experience or full time jobs which is more beneficial.
+
+2. Product Roadmap: <br>
+Product Roadmap is the high-level view of the requirements needed to achieve the product vision, in this case the requirements are considered from the frist assessments where i created a survey to gather information from students. I asked relatable questions that helped me design this application in a specific way for students needs and requiremnts.
+
+3. Product Backlog:* <br>
+a product backlog contains a list of what is needed for your project.
+
+4. Release Plan:* <br>
+A timetable for the release of a working product.
+
+5. Sprint Backlog:* <br>
+The user stories comes 
+The user stories (requirements), goals, and tasks linked to the current sprint.
+
+6. Increment: <br>
+Increment is the final piece where the working product functionality is presented and at the end of the sprint it will be given to the customer. The finalaised working application can be found here "https://github.com/KayleighPerera/COM623_AE2.git" and can be run at "/localhost3000"
 
 <img src="https://user-images.githubusercontent.com/71653944/210141164-648d01a9-f5d8-464b-b972-cf066ec535b7.jpg" alt="Agile methodologies" width="400"/>
 
-### Product Vision Statement 
-A summary that articulates the goals for the product.
-
-### Product Roadmap
-The high-level view of the requirements needed to achieve the product vision.
-
-### Product Backlog
-Ordered by priority, this is the full list of what is needed for your project.
-
-### Release Plan
-A timetable for the release of a working product.
-
-### Sprint Backlog
-The user stories (requirements), goals, and tasks linked to the current sprint.
-
-### Increment
-The working product functionality that is presented to the stakeholders at the end of the sprint and could potentially be given to the customer.
-
 ## User story
+The aim of my user story is for a user to be able to 
+
 ## Conclusion/Results
+By all counts and well proven results, i have learnt the purpose of using React and Fiebase in Javascript to solve a problem for students. I specifcally created a web application to give students more guidance when writing a cv or looking for a job. Using a development methodology called the agile methodology i created a application using Javascipt while also using the design thinking methodology from the first assesment which guided me in creating as well as adapting my design.
 ## Appendix
