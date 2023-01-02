@@ -48,12 +48,6 @@ function Login() {
 
   const handleSocialSubmit = async (method) => {
     try {
-      if (method === "facebook") {
-        console.log("facebook");
-      }
-      if (method === "google") {
-        console.log("google");
-      }
     } catch (error) {
       console.log("error");
     }
@@ -68,7 +62,7 @@ function Login() {
         onEmailSubmit={handleEmailSubmit}
         onSocialSubmit={handleSocialSubmit}
         />
-        <StyledLink to="/join"> Not a member - Join </StyledLink>
+        <StyledLink to="/Join"> Not a member - Join </StyledLink>
       </StyledTile>
     </StyledWrapper>
   );

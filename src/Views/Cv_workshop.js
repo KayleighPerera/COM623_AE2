@@ -1,10 +1,14 @@
-import Histogram from "../Components/Histogram";
 import React from "react";
+import Tile from "../Components/Tile";
 import styled from "styled-components";
+import useAuth from "../services/firebase/useAuth";
+import useProgress from "../services/firebase/useProgress";
+import { useHistory } from "react-router-dom";
 import ProgressBar from "../Components/ProgressBar";
 import { Link } from "react-router-dom";
+import Histogram from "../Components/Histogram";
 
-const checkins = [
+const progress = [
   { date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)" },
   { date: "Wed Jan 28 2020 07:17:11 GMT+0000 (Greenwich Mean Time)" },
   { date: "Wed Jan 27 2020 07:17:11 GMT+0000 (Greenwich Mean Time)" },
@@ -21,48 +25,78 @@ const checkins = [
   { date: "Wed Jan 15 2020 07:17:11 GMT+0000 (Greenwich Mean Time)" },
 ];
 
-function Cv(props) {
-  const StyledDiv = styled.div`
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
-  `;
+const StyledTile = styled(Tile)`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  grid-row-gap: 20px;
+  width: 100%;
+`;
 
-  const StyledCv = styled.p`
-    margin-top: 10%;
-    margin-left: 10%;
-    text-align: left;
-  `;
+const StyledHeading = styled.h4`
+  text-align: center;
+  margin-top: 2%;
+  color: ${({ theme }) => theme.colors.blue};
+`;
 
-  const StyledHeader = styled.h2`
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
-  `;
+const StyledDiv = styled.div`
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+`;
 
-  const TextArea = styled.div`
-    margin-left: 10%;
-    margin-bottom: 2%;
-  `;
+const StyledCv = styled.p`
+  margin-top: 10%;
+  margin-left: 10%;
+  text-align: left;
+`;
+const TextArea = styled.div`
+  margin-left: 10%;
+  margin-bottom: 2%;
+`;
 
-  const StyledLink = styled(Link)`
-    margin-left: 48%;
-    background: linear-gradient(
-      180deg,
-      ${({ theme }) => theme.colors.blue} 0%,
-      ${({ theme }) => theme.colors.grey} 100%
-    );
-    color: #ffffff;
-    font-size: 30px;
-    border-radius: 20px;
-  `;
+const StyledLink = styled(Link)`
+  margin-left: 48%;
+  background: linear-gradient(
+    180deg,
+    ${({ theme }) => theme.colors.blue} 0%,
+    ${({ theme }) => theme.colors.grey} 100%
+  );
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 20px;
+`;
+
+const Progress = () => {
+  const history = useHistory();
+  const { user } = useAuth();
+  const { createProgress } = useProgress();
+  const handleSubmit = async (progress) => {
+    const ckin = {
+      ...progress,
+      ...{
+        photo: user.photoURL,
+        userId: user.uid,
+        userName: user.displayName || user.email,
+        time: new Date(),
+      },
+    };
+
+    try {
+      await createProgress(ckin);
+      history.push("/");
+    } catch (e) {
+      console.log(e);
+      console.log(e);
+    }
+  };
 
   return (
     <div>
-      <StyledHeader>CV Workshop</StyledHeader>
+      <StyledHeading>CV Workshop</StyledHeading>
       <StyledDiv>
         <strong>70%</strong> COMPLETE!
-        <Histogram barCount={4} bars={checkins.map((c) => c.checkins * 5)} />
+        <Histogram barCount={4} bars={progress.map((c) => c.progress * 5)} />
         <ProgressBar percentage={70} />
         <h4 style={{ color: "#1F2041" }}> </h4>
       </StyledDiv>
@@ -87,11 +121,11 @@ function Cv(props) {
           nec nec neque.
         </textarea>
       </TextArea>
-      <div>
-        <StyledLink to="./SuccessCv"> Apply </StyledLink>
-      </div>
+      <StyledLink to="./SuccessCv"> Apply </StyledLink>
     </div>
   );
-}
+};
 
-export default Cv;
+Progress.propTypes = {};
+
+export default Progress;

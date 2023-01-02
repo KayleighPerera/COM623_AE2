@@ -1,7 +1,7 @@
 import React from "react";
 import Tile from "../Components/Tile";
 import styled from "styled-components";
-import book from "../assets/book.png";
+import book from "../assets/book.png"
 import { useLocation } from "react-router-dom";
 
 function SuccessCv(props) {

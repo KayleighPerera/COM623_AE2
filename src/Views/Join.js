@@ -6,7 +6,7 @@ import Form from "../Components/LoginForm";
 import useAuth from "../services/firebase/useAuth";
 
 function Join() {
-  const { createEmailUser, signInFacebookUser, signInGoogleUser } = useAuth();
+  const { createEmailUser } = useAuth();
   const [severErrorMessage, setServerErrorMessage] = useState("");
   const handleEmailSubmit = async (data) => {
     try {
@@ -19,12 +19,6 @@ function Join() {
 
    const handleSocialSubmit = async (method) => {
      try {
-       if (method === "facebook") {
-         await signInFacebookUser();
-       }
-       if (method === "google") {
-         await signInGoogleUser();
-       }
      } catch (error) {
        console.log("error");
      }

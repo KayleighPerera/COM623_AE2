@@ -8,6 +8,7 @@ function Menu(props) {
   const { onClick } = props;
   const location = useLocation();
   const StyledNav = styled.nav`
+  
     ul {
       display: flex;
       flex-direction: column;
@@ -60,6 +61,14 @@ function Menu(props) {
           <StyledLi active={location.pathname === "/DropIn"}>
             {" "}
             <Link to="/DropIn"> Drop-in-sessions </Link>{" "}
+          </StyledLi>
+          <StyledLi active={location.pathname === "/Login"}>
+            {" "}
+          </StyledLi>
+          <StyledLi active={location.pathname === "/Join"}>
+          </StyledLi>
+          <StyledLi active={location.pathname === "/LoginForm"}>
+            {" "}
           </StyledLi>
         </ul>
       </StyledNav>

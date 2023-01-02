@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar";
 import styled from "styled-components";
 
 function DaysCompleted(props) {
-  const { days, checkins } = props;
+  const { days, progress } = props;
 
   const DaysCompleteHeading = styled.h2`
     text-align: center;
@@ -27,7 +27,7 @@ function DaysCompleted(props) {
       <div style={divStyle} id="wrapper">
         <DaysCompleteHeading>Days Completed!</DaysCompleteHeading>
 
-        <Histogram barCount={2} bars={checkins.map((c) => c.score * 5)} />
+        <Histogram barCount={2} bars={progress.map((c) => c.score * 5)} />
         <ProgressBar percentage={50} />
         <h4 style={{ color: "#1F2041" }}>
           {" "}
@@ -40,7 +40,7 @@ function DaysCompleted(props) {
 
 DaysCompleted.propTypes = {
   days: PropTypes.number,
-  checkins: PropTypes.array.isRequired,
+  progress: PropTypes.array.isRequired,
 };
 
 DaysCompleted.defaultProps = {

@@ -1,7 +1,6 @@
 import React from "react";
 import Tile from "../Components/Tile";
 import styled from "styled-components";
-import CheckinForm from "../Components/CheckinForm";
 import profile from "../assets/profile.jpg";
 
 function Info(props) {

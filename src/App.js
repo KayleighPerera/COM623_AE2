@@ -18,7 +18,7 @@ import useAuth from "./services/firebase/useAuth";
 import { initializeApp } from "firebase/app";
 import firebase from "../src/config/firebase";
 
-const checkins = [
+const progress = [
   {
     date: "Wed Jan 29 2020 07:17:11 GMT+0000 (Greenwich Mean Time)",
     cv: 20,
@@ -109,7 +109,7 @@ function App() {
         >
           <Switch>
             <Route exact path="/">
-              <Dash checkins={checkins} />
+              <Dash progress={progress} />
             </Route>
             <Route path="/login">
               <Login />
