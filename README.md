@@ -81,10 +81,10 @@ Product Roadmap is the high-level view of the requirements needed to achieve the
 a product backlog contains a list of what is needed for your project. My application needs to contain specific segments to be able to continue the agile metholdology this list consists of a cv workshop where students are able to edit their cv and send it off to the student focus team in addition there will be a histogram to easily navigate the progress another imporat product backlog used is a drop in session page, a job, login, and a join page
 
 4. Release Plan: <br>
-in this section the release of a working product is released. This is the process of what will be done to create and develop the application web application including the documentation.
+in this section the release of a working product is released. This is the process of what will be done to create and develop the web application including the documentation.
 
 5. Sprint Backlog: <br>
-The [user stories](https://www.atlassian.com/agile/project-management/user-stories) goals are to be able to create an acceptable cv and look for a relatable job which is linked to your course within the web application. The goal of the user is to have a accesible, secure and uncomplicated web application.
+The [user stories](https://www.atlassian.com/agile/project-management/user-stories) goals are to be able to create an acceptable cv and look for a relatable job which is linked to your course within the web application and being able to communicate with the team in Solent university. The goal of the user is to have a accesible, secure and uncomplicated web application.
 
 6. Increment: <br>
 Increment is the final piece where the working product functionality is presented and at the end of the sprint it will be given to the customer. The finalaised working application can be found here "https://github.com/KayleighPerera/COM623_AE2.git" and can be run at "/localhost3000"
