@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import DaysCompleted from "../Components/DaysCompleted";
 import Home from "../Components/home";
-import Cv from "./Cv_workshop";
 import useProgress from "../services/firebase/useProgress";
 
 function Dash(props) {

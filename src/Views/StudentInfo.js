@@ -1,5 +1,4 @@
 import React from "react";
-import Tile from "../Components/Tile";
 import styled from "styled-components";
 import profile from "../assets/profile.jpg";
 
@@ -44,7 +43,7 @@ function Info(props) {
       </StyledImage>
       <StyledDiv>
         <StyledCv>Last checked in 11th October 2022</StyledCv>
-        <textarea rows="20" cols="195" name="description">
+        <textarea id="text" rows="20" cols="195">
           CV Display Lorem ipsum dolor sit amet, Donec luctus tempus massa, in
           iaculis lorem. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Sed feugiat tortor non magna volutpat

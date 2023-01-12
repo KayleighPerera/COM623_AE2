@@ -39,9 +39,12 @@ function Home(props) {
   return (
     <Tile>
       <Text1>
-        This application will help you <br></br>write a cv and find a suitable job
+        This application will help you <br></br>write a cv and find a suitable
+        job
       </Text1>
-      <Button text="Get Started" type="submit" />
+      <Link to="/Cv_workshop">
+        <Button text="Get Started" />
+      </Link>
       <StyledLi active={location.pathname === "/"}>
         <Link to="/Login"> Or Log In </Link>{" "}
       </StyledLi>

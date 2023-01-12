@@ -26,7 +26,7 @@ function Menu(props) {
     justify-content: center;
     align-items: center;
     background: ${({ theme, active }) =>
-      active ? theme.colors.darkShade[25] : ""};
+      active ? theme.colors.grey[25] : ""};
   `;
 
   const StyledClosedText = styled.p`
@@ -98,7 +98,7 @@ function Header(props) {
     hr {
       margin: 4px 0 0 4px;
       width: 20%;
-      border: 1px solid ${({ theme }) => theme.colors.darkShade[100]};
+      border: 1px solid ${({ theme }) => theme.colors.grey[100]};
     }
   `;
 

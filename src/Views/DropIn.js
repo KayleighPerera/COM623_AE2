@@ -6,7 +6,6 @@ function DropIn(props) {
   const StyledHeadings = styled.h2`
     text-align: center;
     margin-top: 10%;
-    float: right;
   `;
 
   const StyledHeader = styled.h2`
